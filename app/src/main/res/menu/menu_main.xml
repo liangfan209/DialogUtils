@@ -3,8 +3,19 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="demo.core.com.dialogutils.MainActivity">
     <item
-        android:id="@+id/action_settings"
+        android:id="@+id/action_normal_msg"
         android:orderInCategory="100"
-        android:title="@string/action_settings"
+        android:title="@string/action_nomal_msg"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/action_no_bottom_msg"
+        android:orderInCategory="100"
+        android:title="@string/action_no_bottom_msg"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_login"
+        android:orderInCategory="100"
+        android:title="@string/action_login_msg"
         app:showAsAction="never" />
 </menu>
