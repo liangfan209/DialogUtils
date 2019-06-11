@@ -2,5 +2,5 @@
     <string name="app_name">DialogUtils</string>
     <string name="action_nomal_msg">普通消息</string>
     <string name="action_no_bottom_msg">无底部按钮</string>
-    <string name="action_login_msg">自定义框</string>
+    <string name="action_login_msg">自定消息</string>
 </resources>

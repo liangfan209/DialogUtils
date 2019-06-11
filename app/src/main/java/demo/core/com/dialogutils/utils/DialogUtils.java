@@ -36,7 +36,7 @@ public class DialogUtils {
     private ClickCallBack mClickCallBack;
 
 
-    public void showCustomView(Context context, String title, View view, ClickCallBack callBack) {
+    public Dialog showCustomView(Context context, String title, View view, ClickCallBack callBack) {
         initLayoutView(context, callBack);
         if (titleTv != null) {
             titleTv.setText(title);
@@ -48,6 +48,7 @@ public class DialogUtils {
             contentLlt.removeAllViews();
             contentLlt.addView(view);
         }
+        return mDialog;
     }
 
 
@@ -137,7 +138,7 @@ public class DialogUtils {
                 dissMissLoginDialog();
             });
         }
-        initDialog(context, view, 0.5f);
+        initDialog(context, view, 0.7f);
     }
 
     public void dissMissLoginDialog() {

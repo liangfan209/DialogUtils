@@ -4,18 +4,36 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
+
+
     <RelativeLayout
-        android:id="@+id/rlt_select"
+        android:id="@+id/rlt_selectName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <android.support.v7.widget.AppCompatSpinner
-            android:id="@+id/spn"
+        <TextView
+            android:id="@+id/tv_name"
             android:layout_width="match_parent"
             android:layout_height="45dp"
-            android:overlapAnchor="false"
-            android:spinnerMode="dropdown" />
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/transparent"
+            android:gravity="center_vertical"
+            android:hint="请选择用户名"
+            android:textSize="13sp" />
+
+        <ImageView
+            android:id="@+id/iv_select"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/triangle_selecter" />
     </RelativeLayout>
+
+
+
 
     <ImageView
         android:layout_width="match_parent"
