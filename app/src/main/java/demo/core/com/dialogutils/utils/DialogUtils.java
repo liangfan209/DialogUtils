@@ -18,7 +18,6 @@ import android.widget.TextView;
 
 import demo.core.com.dialogutils.R;
 
-
 /**
  * 文件名：
  * 描述：自定义的dialog
@@ -150,7 +149,6 @@ public class DialogUtils {
 
     public interface ClickCallBack {
         void ok();
-
         void cacel();
     }
 }

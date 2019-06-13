@@ -67,10 +67,20 @@ public class MainActivity extends AppCompatActivity {
             return true;
         } else if (id == R.id.action_login) {
             //自定义dialog中的xml
-            View view = LinearLayout.inflate(this, R.layout.layout_login, null);
-            RelativeLayout layout = view.findViewById(R.id.rlt_selectName);
-            ImageView iv = view.findViewById(R.id.iv_select);
-            TextView tvName = view.findViewById(R.id.tv_name);
+            View viewDialog = LinearLayout.inflate(this, R.layout.layout_login, null);
+            RelativeLayout layout = viewDialog.findViewById(R.id.rlt_selectName);
+            ImageView iv = viewDialog.findViewById(R.id.iv_select);
+            TextView tvName = viewDialog.findViewById(R.id.tv_name);
+            mDialog = new DialogUtils().showCustomView(this, "自定义Dialog", viewDialog, new DialogUtils.ClickCallBack() {
+                @Override
+                public void ok() {
+                }
+
+                @Override
+                public void cacel() {
+                }
+            });
+
 
             //popupWindow中的xml
             View popView = LayoutInflater.from(this).inflate(R.layout.layout_popup,
@@ -92,16 +102,6 @@ public class MainActivity extends AppCompatActivity {
                 String itemStr = (String) parent.getAdapter().getItem(position);
                 tvName.setText(itemStr);
                 mWindow.dismiss();
-            });
-
-            mDialog = new DialogUtils().showCustomView(this, "自定义Dialog", view, new DialogUtils.ClickCallBack() {
-                @Override
-                public void ok() {
-                }
-
-                @Override
-                public void cacel() {
-                }
             });
 
 
