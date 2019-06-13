@@ -1,8 +1,8 @@
 ### 自定义一个Dialog, 自定义一个PopupWindow
 
 ##### 先上图，不废话
-![image](https://img-blog.csdnimg.cn/20190613131513221.gif)
 
+![image](https://img-blog.csdnimg.cn/20190613131513221.gif)
 
 ##### 1.首先构造出自定义的view，inflate xxx.xml,传给自定义的dialog中
 
@@ -12,7 +12,7 @@ View view = LinearLayout.inflate(context, R.layout.dialog, null);
 
 
 
-##### 2.然后new出一个系统的Dialog，然后更改它的样式
+##### 2.然后new出一个系统的Dialog，更改它的样式
 
 ```java
   /**
@@ -143,4 +143,6 @@ layout.setOnClickListener(v -> { //这里的layou是点击的部分
     iv.animate().rotationBy(90.f);  //方向朝下
 });
 ```
+
+
 
