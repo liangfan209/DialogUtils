@@ -1,7 +1,7 @@
 ### 自定义一个Dialog, 自定义一个PopupWindow
 
 ##### 先上图，不废话
-
+![https://img-blog.csdnimg.cn/20190613131513221.gif]()
 
 
 ##### 1.首先构造出自定义的view，inflate xxx.xml,传给自定义的dialog中
