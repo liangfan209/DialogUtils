@@ -35,7 +35,7 @@ public class DialogUtils {
     private ClickCallBack mClickCallBack;
 
 
-    public Dialog showCustomView(Context context, String title, View view, ClickCallBack callBack) {
+    public void showCustomView(Context context, String title, View view, ClickCallBack callBack) {
         initLayoutView(context, callBack);
         if (titleTv != null) {
             titleTv.setText(title);
@@ -47,7 +47,6 @@ public class DialogUtils {
             contentLlt.removeAllViews();
             contentLlt.addView(view);
         }
-        return mDialog;
     }
 
 
@@ -98,6 +97,11 @@ public class DialogUtils {
     }
 
 
+    /**
+     * @param context 上下文
+     * @param view  自定义的view
+     * @param size  宽度的
+     */
     private void initDialog(Context context, View view, float size) {
         mDialog = new Dialog(context, R.style.dialogTheme);
         mDialog.setContentView(view);

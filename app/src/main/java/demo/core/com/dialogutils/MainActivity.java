@@ -1,6 +1,5 @@
 package demo.core.com.dialogutils;
 
-import android.app.Dialog;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -27,7 +26,6 @@ import demo.core.com.dialogutils.view.PopupWindowList;
 
 public class MainActivity extends AppCompatActivity {
 
-    Dialog mDialog;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -71,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
             RelativeLayout layout = viewDialog.findViewById(R.id.rlt_selectName);
             ImageView iv = viewDialog.findViewById(R.id.iv_select);
             TextView tvName = viewDialog.findViewById(R.id.tv_name);
-            mDialog = new DialogUtils().showCustomView(this, "自定义Dialog", viewDialog, new DialogUtils.ClickCallBack() {
+            new DialogUtils().showCustomView(this, "自定义Dialog", viewDialog, new DialogUtils.ClickCallBack() {
                 @Override
                 public void ok() {
                 }
