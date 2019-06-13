@@ -107,6 +107,7 @@ public class DialogUtils {
         WindowManager windowManager = (WindowManager) context
                 .getSystemService(Context.WINDOW_SERVICE);
         Display display = windowManager.getDefaultDisplay();
+        //设置这个dialog的宽高
         view.setLayoutParams(new FrameLayout.LayoutParams((int) (display
                 .getWidth() * size), FrameLayout.LayoutParams.WRAP_CONTENT));
         mDialog.setCanceledOnTouchOutside(false);
@@ -117,7 +118,7 @@ public class DialogUtils {
     private void initLayoutView(Context context, ClickCallBack clickCallBack) {
         View view = LinearLayout.inflate(context, R.layout.dialog, null);
         this.mClickCallBack = clickCallBack;
-        sureBt = view.findViewById(R.id.bt_login);
+        sureBt = view.findViewById(R.id.bt_ok);
         cancelBt = view.findViewById(R.id.bt_cancel);
         closeIv = view.findViewById(R.id.iv_close);
         contentLlt = view.findViewById(R.id.llt_content);

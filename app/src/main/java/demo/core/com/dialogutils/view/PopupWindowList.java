@@ -1,28 +1,22 @@
-package demo.core.com.dialogutils;
+package demo.core.com.dialogutils.view;
 
 import android.content.Context;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.PopupWindow;
 
-public class TestPopupWindow extends PopupWindow {
+public class PopupWindowList extends PopupWindow {
 
-    public TestPopupWindow(Context context) {
+    public PopupWindowList(Context context, View view) {
         super(context);
         setHeight(ViewGroup.LayoutParams.WRAP_CONTENT);
         setWidth(ViewGroup.LayoutParams.WRAP_CONTENT);
         setOutsideTouchable(true);
         setFocusable(true);
-        setClippingEnabled(false);
+        setClippingEnabled(false); //设置为false能够该view越过父类（也就是dialog)大小的限制
         setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-        View contentView = LayoutInflater.from(context).inflate(R.layout.layout_popup,
-              null, false);
-        contentView.measure(View.MeasureSpec.UNSPECIFIED,View.MeasureSpec.UNSPECIFIED);
-        setContentView(contentView);
+        setContentView(view);
     }
-
-
 }

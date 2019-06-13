@@ -38,23 +38,6 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="1px"
-            android:background="#999999" />
-
-        <EditText
-            android:id="@+id/tv_pwd"
-            android:layout_width="match_parent"
-            android:layout_height="45dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
-            android:background="@android:color/transparent"
-            android:hint="请输入密码"
-            android:inputType="textPassword"
-            android:textSize="13sp" />
-
-
     </LinearLayout>
 
 
@@ -93,7 +76,7 @@
                 android:background="#999999" />
 
             <Button
-                android:id="@+id/bt_login"
+                android:id="@+id/bt_ok"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_margin="10dp"
